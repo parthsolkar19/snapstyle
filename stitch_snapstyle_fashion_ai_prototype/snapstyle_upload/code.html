@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html class="light dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SnapStyle - Upload Inspiration</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Hanken Grotesk & Playfair Display -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Playfair+Display:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-container-lowest": "#120c14", "on-tertiary-container": "#ff9ac6", "surface-bright": "#3e3740", "surface-container-high": "#2e2830", tertiary: "#ffb0d0", "tertiary-fixed-dim": "#ffb0d0", "surface-container": "#241d26", "on-background": "#ebdfea", secondary: "#e3b7f5", "on-secondary-fixed": "#2d0a3f", "on-tertiary-fixed": "#3d0024", error: "#ffb4ab", "on-error": "#690005", "surface-container-highest": "#39323b", "on-surface-variant": "#d1c2d3", "tertiary-container": "#8e0c5a", "surface-container-low": "#1f1922", primary: "#e8b3ff", "on-primary-fixed-variant": "#70109d", "on-secondary-container": "#d1a6e3", "primary-fixed-dim": "#e8b3ff", "primary-container": "#7316a0", "on-error-container": "#ffdad6", "surface-variant": "#39323b", outline: "#9a8c9d", "on-tertiary": "#63003d", "secondary-fixed": "#f6d9ff", "on-tertiary-fixed-variant": "#8a0657", background: "#171119", "on-secondary-fixed-variant": "#5c386d", "surface-tint": "#e8b3ff", "secondary-container": "#5c386d", "outline-variant": "#4e4351", "on-surface": "#ebdfea", "on-primary": "#500074", "inverse-on-surface": "#352e37", "error-container": "#93000a", "surface-dim": "#171119", "primary-fixed": "#f6d9ff", "on-primary-container": "#e1a1ff", "inverse-surface": "#ebdfea", "on-primary-fixed": "#310049", surface: "#171119", "on-secondary": "#442155", "tertiary-fixed": "#ffd8e6", "inverse-primary": "#8a34b7", "secondary-fixed-dim": "#e3b7f5"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {"margin-mobile": "20px", unit: "8px", "margin-desktop": "64px", "container-max": "1440px", gutter: "24px"}, fontFamily: {"label-sm": ["Hanken Grotesk"], "body-lg": ["Hanken Grotesk"], "label-md": ["Hanken Grotesk"], "headline-lg": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "headline-md": ["Playfair Display"], "body-md": ["Hanken Grotesk"], "display-lg": ["Playfair Display"], headline: ["Playfair Display"], display: ["Playfair Display"], body: ["Hanken Grotesk"], label: ["Hanken Grotesk"]}, fontSize: {"label-sm": ["12px", {lineHeight: "16px", fontWeight: "500"}], "body-lg": ["18px", {lineHeight: "28px", fontWeight: "400"}], "label-md": ["14px", {lineHeight: "20px", letterSpacing: "0.05em", fontWeight: "600"}], "headline-lg": ["40px", {lineHeight: "48px", fontWeight: "400"}], "headline-lg-mobile": ["32px", {lineHeight: "40px", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "32px", fontWeight: "500"}], "body-md": ["16px", {lineHeight: "24px", fontWeight: "400"}], "display-lg": ["64px", {lineHeight: "72px", letterSpacing: "-0.02em", fontWeight: "400"}]}}}};</script>
+<style>
+        /* Hide scrollbar for a cleaner editorial look */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        /* Subtle Focus Bracket Effect */
+        .focus-brackets::before, .focus-brackets::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 1px solid var(--tw-colors-primary);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+        }
+        .focus-brackets::before {
+            top: 10px; left: 10px;
+            border-bottom: none; border-right: none;
+        }
+        .focus-brackets::after {
+            bottom: 10px; right: 10px;
+            border-top: none; border-left: none;
+        }
+        .scanning .focus-brackets::before, .scanning .focus-brackets::after {
+            opacity: 1;
+            animation: pulseBracket 2s infinite alternate;
+        }
+        @keyframes pulseBracket {
+            0% { transform: scale(1); opacity: 0.5; }
+            100% { transform: scale(1.1); opacity: 1; }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen antialiased flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile py-4 bg-surface/80 dark:bg-surface/80 backdrop-blur-md">
+<!-- Leading Action -->
+<button aria-label="menu" class="text-on-surface-variant hover:opacity-80 transition-opacity md:hidden">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 300;">menu</span>
+</button>
+<!-- Desktop Nav Cluster (Hidden on Mobile) -->
+<div class="hidden md:flex items-center gap-6 flex-1">
+<button aria-label="menu" class="text-on-surface-variant hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 300;">menu</span>
+</button>
+<nav class="flex gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Find</a>
+<a class="font-label-md text-label-md text-primary font-bold" href="#">Upload</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Wishlist</a>
+</nav>
+</div>
+<!-- Brand Logo -->
+<div class="font-headline-md text-headline-md font-bold tracking-tight text-primary dark:text-primary-fixed md:absolute md:left-1/2 md:-translate-x-1/2">
+            SnapStyle
+        </div>
+<!-- Trailing Action -->
+<div class="flex items-center gap-4 flex-1 justify-end">
+<!-- Profile link added to desktop nav equivalent -->
+<a class="hidden md:flex font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors mr-4" href="#">Profile</a>
+<button aria-label="notifications" class="text-on-surface-variant hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 300;">notifications</span>
+</button>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow pt-28 pb-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full flex flex-col items-center justify-start">
+<!-- Header Section -->
+<div class="text-center max-w-2xl mx-auto mb-12">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-primary mb-4">
+                Upload your outfit inspiration
+            </h1>
+<p class="font-body-lg text-on-surface-variant">
+                Upload a Pinterest screenshot or any fashion image.
+            </p>
+</div>
+<!-- State 1: Upload Zone (Initial) -->
+<div class="w-full max-w-lg relative" id="upload-zone">
+<div class="border-2 border-dashed border-outline-variant bg-surface-container-low rounded-2xl p-12 flex flex-col items-center justify-center text-center cursor-pointer transition-all duration-300 hover:bg-surface-container hover:shadow-sm hover:-translate-y-1 group">
+<!-- Icon -->
+<div class="w-20 h-20 rounded-full bg-secondary-container flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300">
+<span class="material-symbols-outlined text-4xl text-on-secondary-container" style="font-variation-settings: 'wght' 200;">add_a_photo</span>
+</div>
+<h3 class="font-headline-md text-primary mb-2">Drag &amp; Drop</h3>
+<p class="font-body-md text-on-surface-variant mb-8">or tap to browse your gallery</p>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row gap-4 w-full justify-center">
+<button id="btn-browse" class="bg-primary text-on-primary font-label-md text-label-md uppercase px-8 py-4 rounded-full tracking-wider hover:opacity-90 transition-opacity">
+                        Browse Gallery
+                    </button>
+<input type="file" id="imageInput" accept="image/*" hidden>
+<button class="bg-secondary-container text-on-secondary-container font-label-md text-label-md uppercase px-8 py-4 rounded-full tracking-wider hover:bg-surface-variant transition-colors" id="btn-demo-image">
+                        Use Demo Image
+                    </button>
+</div>
+</div>
+</div>
+<!-- State 2: Preview Area (Hidden Initially) -->
+<div class="w-full max-w-lg hidden flex-col items-center opacity-0 transform translate-y-4 transition-all duration-700 ease-out" id="preview-zone">
+<!-- Image Container -->
+<div class="relative w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] mb-8 focus-brackets scanning">
+<div class="absolute inset-0 bg-secondary-container/20 mix-blend-multiply pointer-events-none z-10"></div>
+<img class="w-full h-full object-cover" data-alt="A high-fashion editorial photograph of a chic, minimalist outfit featuring a structured beige trench coat over a crisp white oversized shirt and tailored charcoal trousers. The lighting is soft and natural, resembling an upscale studio shoot with a pristine white background. The aesthetic is 'quiet luxury', perfectly aligning with a sophisticated, digital atelier vibe. The image is crisp, modern, and highly curated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy_WSntmjjMMUOajZyJKWx3xRnDI7M-Gttfbj_LngD01IMsxMBc5ZQEDWaZy6BNrlL69YZP6H5ogx4iWin4J1mY3YJ3hL340S0ZuilNxaAo0YaIrtIVSmpDnGkKfj1FccZWBPnPGegtH6Kktofi6ZsBXNbE7hdRv43zR45RMWXEq4QWvAc06YIrv30VAcagkb19MIdJ2orenmSoF19hFaPwQgncB4sFB5C0NiONkGWfyLz2prlykFdWg"/>
+<!-- Simulated AI Scanning overlay element -->
+<div class="absolute top-0 left-0 w-full h-1 bg-primary-container opacity-50 z-20 animate-[scan_3s_ease-in-out_infinite]"></div>
+</div>
+<!-- Primary Action -->
+<button id="btn-analyze" class="w-full bg-primary text-on-primary font-label-md text-label-md uppercase px-8 py-5 rounded-full tracking-wider hover:opacity-90 hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-3">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 300;">auto_awesome</span>
+                Analyze My Look
+            </button>
+<button class="mt-4 font-label-md text-label-sm text-on-surface-variant hover:text-primary transition-colors underline underline-offset-4" id="btn-reset">
+                Upload a different image
+            </button>
+</div>
+</main>
+<!-- BottomNavBar (Hidden on md and up) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-surface/90 dark:bg-surface-container/90 backdrop-blur-lg rounded-t-xl shadow-sm">
+<!-- Home (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-60 hover:text-primary dark:hover:text-primary-fixed transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform mb-1" style="font-variation-settings: 'wght' 300;">home</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Home</span>
+</a>
+<!-- Find (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-60 hover:text-primary dark:hover:text-primary-fixed transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform mb-1" style="font-variation-settings: 'wght' 300;">search</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Find</span>
+</a>
+<!-- Upload (Active) - Semantic Match -->
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed font-bold scale-110 transition-transform duration-300" href="#">
+<!-- Using fill for active state indicator as per editorial guidelines implied -->
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1, 'wght' 400;">add_a_photo</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Upload</span>
+</a>
+<!-- Wishlist (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-60 hover:text-primary dark:hover:text-primary-fixed transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform mb-1" style="font-variation-settings: 'wght' 300;">favorite</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Wishlist</span>
+</a>
+<!-- Profile (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-60 hover:text-primary dark:hover:text-primary-fixed transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform mb-1" style="font-variation-settings: 'wght' 300;">person</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Profile</span>
+</a>
+</nav>
+<!-- Simple interaction script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const uploadZone = document.getElementById('upload-zone');
+            const previewZone = document.getElementById('preview-zone');
+            const btnDemo = document.getElementById('btn-demo-image');
+            const btnReset = document.getElementById('btn-reset');
+            const btnBrowse = document.getElementById('btn-browse');
+const imageInput = document.getElementById('imageInput');
+btnBrowse.addEventListener('click', () => {
+    imageInput.click();
+});
+imageInput.addEventListener('change', (event) => {
+    const file = event.target.files[0];
+
+    if (!file) return;
+
+    const reader = new FileReader();
+
+    reader.onload = () => {
+        const imageData = reader.result;
+
+        previewZone.querySelector('img').src = imageData;
+
+        uploadZone.classList.add('hidden');
+        previewZone.classList.remove('hidden');
+
+        previewZone.style.opacity = '1';
+        previewZone.style.transform = 'translateY(0)';
+
+        previewZone.dataset.imageData = imageData;
+    };
+
+    reader.readAsDataURL(file);
+});
+const btnAnalyze = document.getElementById('btn-analyze');
+btnAnalyze.addEventListener('click', async () => {
+
+    const image = previewZone.querySelector('img').src;
+
+    btnAnalyze.disabled = true;
+    btnAnalyze.innerText = 'Analyzing...';
+
+    try {
+
+        const response = await fetch('http://localhost:3000/analyze', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                image: image
+            })
+        });
+
+        const data = await response.json();
+
+console.log('AI Result:', data);
+console.log("FULL AI RESPONSE:", data);
+
+if (!response.ok) {
+
+    if (response.status === 503) {
+        alert('Gemini is temporarily busy. Automatic retries failed. Please try again.');
+    } else {
+        alert(data.details || data.error || 'AI analysis failed.');
+    }
+
+    return;
+}
+
+if (data.result !== undefined) {
+
+            const cleanResult = data.result
+    .replace(/```json/g, '')
+    .replace(/```/g, '')
+    .trim();
+
+const analysis = JSON.parse(cleanResult);
+            console.log('Parsed Items:', analysis.items);
+            localStorage.setItem(
+    'snapstyleAnalysis',
+    JSON.stringify(analysis)
+);
+
+window.location.href = '../snapstyle_detected_items/code.html';
+
+            
+
+        } else {
+            alert('AI did not return any items.');
+        }
+
+    } catch (error) {
+
+        console.error(error);
+        alert('AI analysis failed. Check the console.');
+
+    }
+
+    btnAnalyze.disabled = false;
+    btnAnalyze.innerText = 'Analyze My Look';
+
+});
+console.log("Analyze button found:", btnAnalyze);
+
+            btnDemo.addEventListener('click', () => {
+                // Hide Upload Zone
+                uploadZone.style.opacity = '0';
+                uploadZone.style.transform = 'translateY(-20px)';
+                
+                setTimeout(() => {
+                    uploadZone.classList.add('hidden');
+                    // Show Preview Zone
+                    previewZone.classList.remove('hidden');
+                    
+                    // Trigger reflow for animation
+                    void previewZone.offsetWidth;
+                    
+                    previewZone.style.opacity = '1';
+                    previewZone.style.transform = 'translateY(0)';
+                }, 300);
+            });
+
+            btnReset.addEventListener('click', () => {
+                 // Hide Preview Zone
+                 previewZone.style.opacity = '0';
+                 previewZone.style.transform = 'translateY(20px)';
+                 
+                 setTimeout(() => {
+                     previewZone.classList.add('hidden');
+                     // Show Upload Zone
+                     uploadZone.classList.remove('hidden');
+                     
+                     // Trigger reflow
+                     void uploadZone.offsetWidth;
+                     
+                     uploadZone.style.opacity = '1';
+                     uploadZone.style.transform = 'translateY(0)';
+                 }, 300);
+            });
+        });
+
+        // Add scanline animation to tailwind config dynamically for the specific effect
+        tailwind.config.theme.extend.keyframes = {
+            scan: {
+                '0%': { top: '0%' },
+                '50%': { top: '100%' },
+                '100%': { top: '0%' },
+            }
+        };
+    </script>
+</body></html>

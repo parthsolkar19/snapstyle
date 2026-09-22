@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SnapStyle - Wishlist</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Playfair+Display:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-container-lowest": "#120c14", "on-tertiary-container": "#ff9ac6", "surface-bright": "#3e3740", "surface-container-high": "#2e2830", tertiary: "#ffb0d0", "tertiary-fixed-dim": "#ffb0d0", "surface-container": "#241d26", "on-background": "#ebdfea", secondary: "#e3b7f5", "on-secondary-fixed": "#2d0a3f", "on-tertiary-fixed": "#3d0024", error: "#ffb4ab", "on-error": "#690005", "surface-container-highest": "#39323b", "on-surface-variant": "#d1c2d3", "tertiary-container": "#8e0c5a", "surface-container-low": "#1f1922", primary: "#e8b3ff", "on-primary-fixed-variant": "#70109d", "on-secondary-container": "#d1a6e3", "primary-fixed-dim": "#e8b3ff", "primary-container": "#7316a0", "on-error-container": "#ffdad6", "surface-variant": "#39323b", outline: "#9a8c9d", "on-tertiary": "#63003d", "secondary-fixed": "#f6d9ff", "on-tertiary-fixed-variant": "#8a0657", background: "#171119", "on-secondary-fixed-variant": "#5c386d", "surface-tint": "#e8b3ff", "secondary-container": "#5c386d", "outline-variant": "#4e4351", "on-surface": "#ebdfea", "on-primary": "#500074", "inverse-on-surface": "#352e37", "error-container": "#93000a", "surface-dim": "#171119", "primary-fixed": "#f6d9ff", "on-primary-container": "#e1a1ff", "inverse-surface": "#ebdfea", "on-primary-fixed": "#310049", surface: "#171119", "on-secondary": "#442155", "tertiary-fixed": "#ffd8e6", "inverse-primary": "#8a34b7", "secondary-fixed-dim": "#e3b7f5"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {"margin-mobile": "20px", unit: "8px", "margin-desktop": "64px", "container-max": "1440px", gutter: "24px"}, fontFamily: {"label-sm": ["Hanken Grotesk"], "body-lg": ["Hanken Grotesk"], "label-md": ["Hanken Grotesk"], "headline-lg": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "headline-md": ["Playfair Display"], "body-md": ["Hanken Grotesk"], "display-lg": ["Playfair Display"], headline: ["Playfair Display"], display: ["Playfair Display"], body: ["Hanken Grotesk"], label: ["Hanken Grotesk"]}, fontSize: {"label-sm": ["12px", {lineHeight: "16px", fontWeight: "500"}], "body-lg": ["18px", {lineHeight: "28px", fontWeight: "400"}], "label-md": ["14px", {lineHeight: "20px", letterSpacing: "0.05em", fontWeight: "600"}], "headline-lg": ["40px", {lineHeight: "48px", fontWeight: "400"}], "headline-lg-mobile": ["32px", {lineHeight: "40px", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "32px", fontWeight: "500"}], "body-md": ["16px", {lineHeight: "24px", fontWeight: "400"}], "display-lg": ["64px", {lineHeight: "72px", letterSpacing: "-0.02em", fontWeight: "400"}]}}}};</script>
+<style>
+        body {
+            background-color: #fbf9f9; /* surface */
+            color: #1b1c1c; /* on-surface */
+        }
+        .editorial-tab-active {
+            border-bottom: 2px solid #000000;
+            color: #000000;
+        }
+        .editorial-tab-inactive {
+            color: #747878; /* outline */
+            border-bottom: 2px solid transparent;
+        }
+        .product-card-hover {
+            transition: all 0.3s ease;
+        }
+        .product-card-hover:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+        }
+        .heart-icon {
+            transition: fill 0.2s, color 0.2s;
+        }
+        .heart-icon.filled {
+            font-variation-settings: 'FILL' 1;
+            color: #ba1a1a;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased min-h-screen flex flex-col pt-20 pb-24 md:pb-0 md:pt-24">
+<!-- TopAppBar (Web & Mobile) -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-surface/80 backdrop-blur-md">
+<button class="hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-primary" data-icon="menu">menu</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold tracking-tight text-primary">SnapStyle</h1>
+<button class="hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-primary" data-icon="notifications">notifications</span>
+</button>
+<!-- Desktop Nav Items (hidden on mobile) -->
+<nav class="hidden md:flex gap-8 absolute left-1/2 -translate-x-1/2">
+<a class="font-label-md text-label-md text-on-surface-variant hover:opacity-80 transition-opacity" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:opacity-80 transition-opacity" href="#">Find</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:opacity-80 transition-opacity" href="#">Upload</a>
+<a class="font-label-md text-label-md text-primary flex flex-col items-center" href="#">Wishlist<span class="w-1 h-1 bg-primary rounded-full mt-1"></span></a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:opacity-80 transition-opacity" href="#">Profile</a>
+</nav>
+</header>
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-8">
+<!-- Page Header -->
+<div class="mb-12 text-center md:text-left">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-primary mb-2">Your Saved Styles</h2>
+<p class="font-body-md text-on-surface-variant">Curated pieces and complete looks you love.</p>
+</div>
+<!-- Tabs -->
+<div class="flex gap-8 mb-12 border-b border-surface-variant overflow-x-auto pb-[2px]">
+<button class="font-label-md text-label-md editorial-tab-active pb-2 px-1 whitespace-nowrap" id="tab-products">
+                Products (12)
+            </button>
+<button class="font-label-md text-label-md editorial-tab-inactive pb-2 px-1 whitespace-nowrap hover:text-primary transition-colors" id="tab-looks">
+                Complete Outfits (4)
+            </button>
+</div>
+<!-- Tab Content: Products Grid -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-gutter gap-y-12" id="content-products">
+<!-- Product Card 1 -->
+<article class="group product-card-hover rounded-2xl bg-secondary-fixed/30 overflow-hidden relative border-none">
+<button class="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-surface/80 flex items-center justify-center backdrop-blur-sm shadow-sm" onclick="this.querySelector('span').classList.toggle('filled')">
+<span class="material-symbols-outlined heart-icon text-primary filled" data-icon="favorite">favorite</span>
+</button>
+<div class="aspect-[3/4] w-full overflow-hidden bg-surface-container-high">
+<img alt="Structured Trench Coat" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A high-fashion product shot of a minimalist beige structured trench coat on a mannequin, set against a pristine white studio background with soft, diffused lighting. The aesthetic is clean, modern, and quiet luxury, emphasizing the garment's sharp tailoring and high-quality fabric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCNTfSvedHcir1kRbbOFgTeA6uuCWwGuBlb5qDQCj2Oc1G3CdcS5q9EU85JUqtwogHMb_mPSw0V5jnVuvKJou3L6V70Zl3pq5bdhqzu-xAn_9ZBlanN0toopk5oVHT6sVRClC-lh_udjePi_2SjNMI_vk77dOM7dJtY7VZz_fJz3xqZ7YsLD5zCPD-fHVzb3iTHWaenibDBaPrO8r2K837H7Np_CFNXahVR_fPxm911NFAe5X6FykM7A"/>
+</div>
+<div class="p-4 bg-surface-container-lowest">
+<h3 class="font-label-md text-label-md text-primary mb-1 truncate">Structured Trench Coat</h3>
+<p class="font-body-md text-on-surface-variant text-sm">$345</p>
+</div>
+</article>
+<!-- Product Card 2 -->
+<article class="group product-card-hover rounded-2xl bg-secondary-fixed/30 overflow-hidden relative border-none">
+<button class="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-surface/80 flex items-center justify-center backdrop-blur-sm shadow-sm" onclick="this.querySelector('span').classList.toggle('filled')">
+<span class="material-symbols-outlined heart-icon text-primary filled" data-icon="favorite">favorite</span>
+</button>
+<div class="aspect-[3/4] w-full overflow-hidden bg-surface-container-high">
+<img alt="Silk Evening Slip" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A premium close-up shot of an elegant silk slip dress in deep charcoal black, draped fluidly. The lighting is moody and editorial, creating soft highlights on the silk texture against a minimalist light grey backdrop, embodying a sleek, sophisticated fashion vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIxPUEJGNyymytdKxuxBCUcHSG4cwMfyv0m2Y8kN2WeIEBv6vieoZzvQ0NUOTsFXqPEZ-D2fBxy_jqVOXkGaH8ie_xiN1JYNC7V3-uFaJhdBYFK0X8fChppyhPwlYUm6v4BtDHsKevmTe0qOAFCnVkmcAX7c073kTEGFTRWnV44lXDCcK_NoKJ7tdKvr2oZyHIoDBsKP0acBHWA_WfbDnG_qY6XhlUnL84Gxru0fLUKoLF7AC4xaM3cg"/>
+</div>
+<div class="p-4 bg-surface-container-lowest">
+<h3 class="font-label-md text-label-md text-primary mb-1 truncate">Silk Evening Slip</h3>
+<p class="font-body-md text-on-surface-variant text-sm">$180</p>
+</div>
+</article>
+<!-- Product Card 3 -->
+<article class="group product-card-hover rounded-2xl bg-secondary-fixed/30 overflow-hidden relative border-none">
+<button class="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-surface/80 flex items-center justify-center backdrop-blur-sm shadow-sm" onclick="this.querySelector('span').classList.toggle('filled')">
+<span class="material-symbols-outlined heart-icon text-primary filled" data-icon="favorite">favorite</span>
+</button>
+<div class="aspect-[3/4] w-full overflow-hidden bg-surface-container-high">
+<img alt="Geometric Gold Hoops" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A highly detailed product image of chunky geometric gold hoop earrings resting on a smooth cream stone surface. The lighting is warm and directional, casting distinct architectural shadows. The style is modern minimalist jewelry editorial." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgpaFUZaJ-dtXOfg5cE0ubgh7wCZWrj-09lPqWEi0DvjAc2qrgWwqN2r1mhqwcCSsEsuhxrjK0bvrMcoOb6VeiBRoEfYcbeTe6CXF69w8bcwcVmfta1gnnreDMLNzW9rOzhxue-_om710RygmGHrGzuXAft-EjhCm3-12vFBZApNGJwr2NN4GicAs16VPBmyPeenI6eyHI_Dm_cVayMR2gNfx5otEFshw5SOCV2GwA7I2v_2EXk7Hv-Q"/>
+</div>
+<div class="p-4 bg-surface-container-lowest">
+<h3 class="font-label-md text-label-md text-primary mb-1 truncate">Geometric Gold Hoops</h3>
+<p class="font-body-md text-on-surface-variant text-sm">$95</p>
+</div>
+</article>
+<!-- Product Card 4 -->
+<article class="group product-card-hover rounded-2xl bg-secondary-fixed/30 overflow-hidden relative border-none">
+<button class="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-surface/80 flex items-center justify-center backdrop-blur-sm shadow-sm" onclick="this.querySelector('span').classList.toggle('filled')">
+<span class="material-symbols-outlined heart-icon text-primary filled" data-icon="favorite">favorite</span>
+</button>
+<div class="aspect-[3/4] w-full overflow-hidden bg-surface-container-high">
+<img alt="Minimalist Leather Crossbody" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A clean editorial shot of a minimalist white leather crossbody bag with subtle silver hardware, placed diagonally on a soft off-white fabric backdrop. Natural daylight illuminates the smooth texture of the leather, conveying a sense of quiet luxury and modern utility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXgPQzOsjWJ6K6T5Dy25QWGz_LQbc9YGt73YN-KuVIDanCSDiQHrfhnjaW13ro5npwMAcWkUkF2OtAD2ek8nG65arh51Lyo3tsJYg7rKPukbJeXJcxKCHOEgJ63RcyhqfzTN8z0aIYK60czkY6GKsgvKTVh2iPXy7h6efcuMfmhX-e1Wx1wz1EbJUCkIVqo2sdSgbagE2QX-LJ-G6u0oNeVjfW-LSOw0MAspgzvDl9gLre-updJfavTw"/>
+</div>
+<div class="p-4 bg-surface-container-lowest">
+<h3 class="font-label-md text-label-md text-primary mb-1 truncate">Minimal Leather Crossbody</h3>
+<p class="font-body-md text-on-surface-variant text-sm">$220</p>
+</div>
+</article>
+</div>
+<!-- Tab Content: Complete Outfits (Hidden by default) -->
+<div class="hidden grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-12" id="content-looks">
+<!-- Outfit Card 1 -->
+<article class="group product-card-hover rounded-2xl overflow-hidden relative border-none flex flex-col md:flex-row bg-surface-container-lowest">
+<button class="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-surface/80 flex items-center justify-center backdrop-blur-sm shadow-sm" onclick="this.querySelector('span').classList.toggle('filled')">
+<span class="material-symbols-outlined heart-icon text-primary filled" data-icon="favorite">favorite</span>
+</button>
+<div class="md:w-1/2 aspect-square md:aspect-auto overflow-hidden bg-surface-container-high">
+<img alt="Urban Chic Layered Look" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A full-length fashion editorial photograph of a model walking down a sunlit urban street wearing a sophisticated layered outfit: a beige oversized blazer, a crisp white button-down, dark tailored wide-leg trousers, and sleek black loafers. The aesthetic is modern chic, with high contrast lighting and a sense of movement." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRnJkbJpbCyPTGXNXxKWLsLVuncv5OqbPPs4Pkpln6sYcDeCUkPNQauedWwefhWUJRgyZ5dbFg6SPwLHhU8_vvlDgl7ciR7RB_QQXrr1NIS5JjI2aNoiTxN81VXz0FN_qDdFWWLb3gbg1NidPbxGCHsdxlMV92uJd-tivp_INJvG7foDWbF2GqNVHQX5UlYHcL4jC1APAsRXMBSDhZ-DhYnrWTsRZqH7SFo_yPKuZFTYKSq36KnntKGA"/>
+</div>
+<div class="p-8 md:w-1/2 flex flex-col justify-center bg-secondary-fixed/20">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Urban Chic</h3>
+<p class="font-body-md text-on-surface-variant mb-6">4 Items • AI Curated</p>
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-surface-container-high rounded bg-cover bg-center" data-alt="Small thumbnail image of a beige oversized blazer in a minimalist flat lay composition." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCvCt-cnZFx1h7yJB3l2ws6bcUX8LWqObGbqpfNptVyRlVPLrPVxTK6QcGnnp_f2AS8n4RbW9a9S3fDTnOgk-OS7kpRsqbq6A3eAdvkTHLj8YpJ_vtoxjJ5G0tUGRDjx7799gWk9nerw83AJQ-TgLZDhxFXzuGCIbkNSTj9RiggfF4eNZP1811hOiNNR2Zk48zPkXq6ywjKlgcx4AQ3IcSqqAJK37_cRa219ydwkst4fIcqfY-N1QCH_A')"></div>
+<span class="font-label-sm text-label-sm text-primary">Oversized Blazer</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-surface-container-high rounded bg-cover bg-center" data-alt="Small thumbnail image of a crisp white button-down shirt folded neatly." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCpSl9trmoZC9ZfXB_RKFT1zqhkf8zNL1G8U6CVk_frFsabciic0g-opC0A0BMnaull0W5837neXrnPEMOadDmlmFpfzbx13mGowBzyobIGpmuQDBgM5ITQiVoPx0OHHBedL5hmQUqSR3tIDnAKDNhjqU4zy31_lxRMogFkJF_tJx5qI2HPrlKZYrsifa6mj2tZQlFPeSUdJzRDFWgltN1J-6FhLbEfjflH8AZwP3GmaguAr79P6VuT9A')"></div>
+<span class="font-label-sm text-label-sm text-primary">Classic Button-Down</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-surface-container-high rounded bg-cover bg-center" data-alt="Small thumbnail image of dark charcoal wide-leg tailored trousers." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDRBrBOB5jqzR-yJOS7iD1Ud4VCAB4fiy3co-i024GNTk1GrpQ_QGVf-Tak17-T7U5sKi25RfFIzokpvyyaD69m4d-rdD_j_NjSfSXQp7t-ZwfJ_0rRm6_Zb24m7pCXODKVoJyfTbT8e8QEW_2W5Ybf1PWZIv9ZVtgpZdDwrPI2mcrtSYe46sQixfbs2Gag6H2OAJFQTgHL1k_XG97SmGog1OOMufcftYqmOIADn9pgYV0xpjaGt4dNLQ')"></div>
+<span class="font-label-sm text-label-sm text-primary">Wide-Leg Trousers</span>
+</div>
+</div>
+<button class="mt-8 self-start bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded-full hover:bg-surface-tint transition-colors uppercase tracking-widest">
+                        Shop Look
+                    </button>
+</div>
+</article>
+<!-- Outfit Card 2 -->
+<article class="group product-card-hover rounded-2xl overflow-hidden relative border-none flex flex-col md:flex-row bg-surface-container-lowest">
+<button class="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-surface/80 flex items-center justify-center backdrop-blur-sm shadow-sm" onclick="this.querySelector('span').classList.toggle('filled')">
+<span class="material-symbols-outlined heart-icon text-primary filled" data-icon="favorite">favorite</span>
+</button>
+<div class="md:w-1/2 aspect-square md:aspect-auto overflow-hidden bg-surface-container-high">
+<img alt="Evening Elegance Outfit" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A moody, high-end studio fashion shot featuring a model posing on a minimalist wooden chair, wearing an elegant evening ensemble: a sleek black midi slip dress paired with sheer black tights, stiletto heels, and delicate silver jewelry. The lighting is dramatic and low-key, emphasizing luxury and sophistication." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNSuxIH8drdQrlLMSuFWs-184fP5AXLqP_0NfhcxpLF2A5XY6w8s3dXSHIjfffcfdiyF9b6w-g99pWNjmBoVU6E9df11Eb4g3yKGW75Bc8Xsvh-uIU_PWStJjLBldRFbqpLs__BU5nvDN8n6fXUlULzQxxUDe1NAj0xP6rciIPEMxFfUlMV0PXKmcB85fl3hEXOyWD0VeX1-ybBPc1Dv_Zc2X5tvv30klbZPPwmzFGvUGuHltZ1MD5JA"/>
+</div>
+<div class="p-8 md:w-1/2 flex flex-col justify-center bg-secondary-fixed/20">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Evening Elegance</h3>
+<p class="font-body-md text-on-surface-variant mb-6">3 Items • Manual Save</p>
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-surface-container-high rounded bg-cover bg-center" data-alt="Small thumbnail image of a sleek black midi slip dress on a hanger." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDeRke4CwFdA_lRZLuG7EtiI8UDf0d6Idqduj0srLd9R-nCOJaHRb_uZ7u1QX6tjl8jKvU-LA3467dhTDmq0kNvUEDW4kuERzXEcuaVGLPnP16o8GhuxRwpy7Kh_WUGONz1-UthSi7YJ6S9aZeYHt48QBwzrdP28FmVw7j3fm3zGdNJT5Z2u_OfXcvYUL1XIU2H9oQmsKIM_MqNuIeK2mWSeUOCCyxIQHBJ55G2eGhXiN_4JQY_qNVa1g')"></div>
+<span class="font-label-sm text-label-sm text-primary">Silk Midi Dress</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-surface-container-high rounded bg-cover bg-center" data-alt="Small thumbnail image of black stiletto heels on a cream background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCOryUxilPeSEe4OCZz0OlCB-hGXjhXERL4CRg8rDvxFoNbjx6pVSNwGyqlym1rdLtmCDfmsTolC82rBbqx9Ik3w-4-qHI9j2gA77ZeKPFSaa5s3xKbEREEoF30P1IKbr7HW8NULLPxydOTpAlQNFL2Xa4HWn-GtC99weJegO6zMu6oOfR8KHq34QI5vwoGeg8vm7YgK-xWYgYD_5LGPS-Czuk_tEVk4oLSlOfBUPYGXfqBQSmOC21wsA')"></div>
+<span class="font-label-sm text-label-sm text-primary">Stiletto Pumps</span>
+</div>
+</div>
+<button class="mt-8 self-start bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded-full hover:bg-surface-tint transition-colors uppercase tracking-widest">
+                        Shop Look
+                    </button>
+</div>
+</article>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-surface/90 backdrop-blur-lg rounded-t-xl shadow-sm">
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-60 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-60 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider mt-1">Find</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-60 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="add_a_photo">add_a_photo</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider mt-1">Upload</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary font-bold scale-110 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="favorite" data-weight="fill" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider mt-1">Wishlist</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-60 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider mt-1">Profile</span>
+</a>
+</nav>
+<script>
+        // Simple Tab Logic
+        const tabProducts = document.getElementById('tab-products');
+        const tabLooks = document.getElementById('tab-looks');
+        const contentProducts = document.getElementById('content-products');
+        const contentLooks = document.getElementById('content-looks');
+
+        tabProducts.addEventListener('click', () => {
+            tabProducts.className = "font-label-md text-label-md editorial-tab-active pb-2 px-1 whitespace-nowrap";
+            tabLooks.className = "font-label-md text-label-md editorial-tab-inactive pb-2 px-1 whitespace-nowrap hover:text-primary transition-colors";
+            contentProducts.classList.remove('hidden');
+            contentLooks.classList.add('hidden');
+        });
+
+        tabLooks.addEventListener('click', () => {
+            tabLooks.className = "font-label-md text-label-md editorial-tab-active pb-2 px-1 whitespace-nowrap";
+            tabProducts.className = "font-label-md text-label-md editorial-tab-inactive pb-2 px-1 whitespace-nowrap hover:text-primary transition-colors";
+            contentLooks.classList.remove('hidden');
+            contentProducts.classList.add('hidden');
+        });
+    </script>
+</body></html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html class="light dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SnapStyle - AI Analysis</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Playfair+Display:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-container-lowest": "#120c14", "on-tertiary-container": "#ff9ac6", "surface-bright": "#3e3740", "surface-container-high": "#2e2830", tertiary: "#ffb0d0", "tertiary-fixed-dim": "#ffb0d0", "surface-container": "#241d26", "on-background": "#ebdfea", secondary: "#e3b7f5", "on-secondary-fixed": "#2d0a3f", "on-tertiary-fixed": "#3d0024", error: "#ffb4ab", "on-error": "#690005", "surface-container-highest": "#39323b", "on-surface-variant": "#d1c2d3", "tertiary-container": "#8e0c5a", "surface-container-low": "#1f1922", primary: "#e8b3ff", "on-primary-fixed-variant": "#70109d", "on-secondary-container": "#d1a6e3", "primary-fixed-dim": "#e8b3ff", "primary-container": "#7316a0", "on-error-container": "#ffdad6", "surface-variant": "#39323b", outline: "#9a8c9d", "on-tertiary": "#63003d", "secondary-fixed": "#f6d9ff", "on-tertiary-fixed-variant": "#8a0657", background: "#171119", "on-secondary-fixed-variant": "#5c386d", "surface-tint": "#e8b3ff", "secondary-container": "#5c386d", "outline-variant": "#4e4351", "on-surface": "#ebdfea", "on-primary": "#500074", "inverse-on-surface": "#352e37", "error-container": "#93000a", "surface-dim": "#171119", "primary-fixed": "#f6d9ff", "on-primary-container": "#e1a1ff", "inverse-surface": "#ebdfea", "on-primary-fixed": "#310049", surface: "#171119", "on-secondary": "#442155", "tertiary-fixed": "#ffd8e6", "inverse-primary": "#8a34b7", "secondary-fixed-dim": "#e3b7f5"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {"margin-mobile": "20px", unit: "8px", "margin-desktop": "64px", "container-max": "1440px", gutter: "24px"}, fontFamily: {"label-sm": ["Hanken Grotesk"], "body-lg": ["Hanken Grotesk"], "label-md": ["Hanken Grotesk"], "headline-lg": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "headline-md": ["Playfair Display"], "body-md": ["Hanken Grotesk"], "display-lg": ["Playfair Display"], headline: ["Playfair Display"], display: ["Playfair Display"], body: ["Hanken Grotesk"], label: ["Hanken Grotesk"]}, fontSize: {"label-sm": ["12px", {lineHeight: "16px", fontWeight: "500"}], "body-lg": ["18px", {lineHeight: "28px", fontWeight: "400"}], "label-md": ["14px", {lineHeight: "20px", letterSpacing: "0.05em", fontWeight: "600"}], "headline-lg": ["40px", {lineHeight: "48px", fontWeight: "400"}], "headline-lg-mobile": ["32px", {lineHeight: "40px", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "32px", fontWeight: "500"}], "body-md": ["16px", {lineHeight: "24px", fontWeight: "400"}], "display-lg": ["64px", {lineHeight: "72px", letterSpacing: "-0.02em", fontWeight: "400"}]}}}};</script>
+<style>
+        .scan-line {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: rgba(26, 26, 26, 0.8);
+            box-shadow: 0 0 10px rgba(26, 26, 26, 0.5);
+            animation: scan 3s linear infinite;
+        }
+
+        @keyframes scan {
+            0% { top: 0%; opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { top: 100%; opacity: 0; }
+        }
+
+        .focus-bracket {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #1A1A1A;
+            transition: all 0.3s ease;
+        }
+
+        .bracket-tl { top: 16px; left: 16px; border-right: none; border-bottom: none; }
+        .bracket-tr { top: 16px; right: 16px; border-left: none; border-bottom: none; }
+        .bracket-bl { bottom: 16px; left: 16px; border-right: none; border-top: none; }
+        .bracket-br { bottom: 16px; right: 16px; border-left: none; border-top: none; }
+
+        .image-container:hover .focus-bracket {
+            width: 30px;
+            height: 30px;
+        }
+
+        .fade-in-step {
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeInUp 0.5s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen font-body-md selection:bg-primary selection:text-on-primary pb-32">
+<!-- TopAppBar Navigation (Suppressed for Transactional/Analysis flow as per logic, keeping it minimal if required but usually suppressed. Keeping a generic header for structure) -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-surface/80 backdrop-blur-md">
+<div class="flex items-center gap-4">
+<button aria-label="Back" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="arrow_back">arrow_back</span>
+</button>
+</div>
+<h1 class="font-headline-md text-headline-md font-bold tracking-tight text-primary">SnapStyle</h1>
+<div class="w-10"></div> <!-- Spacer for center alignment -->
+</header>
+<main class="pt-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row gap-gutter items-start justify-center max-w-5xl mx-auto">
+<!-- Left Column: Image Area -->
+<div class="w-full md:w-1/2 flex flex-col items-center">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-center mb-8">Analyzing your look...</h2>
+<div class="relative w-full aspect-[3/4] max-w-md mx-auto rounded-2xl overflow-hidden image-container bg-surface-container-low shadow-[0_4px_24px_rgba(0,0,0,0.05)]">
+<img class="w-full h-full object-cover rounded-2xl opacity-90 transition-opacity duration-1000" data-alt="A high-fashion street style photograph of a model walking confidently. The model is wearing a crisp white top, well-fitted blue jeans, and clean white sneakers, accessorized with a stylish brown handbag, dark sunglasses, and a delicate silver necklace. The lighting is bright and natural, casting soft shadows, perfectly fitting a light-mode editorial aesthetic with a serene yet sophisticated mood." id="uploaded-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM8jsCn8WeBjhTpgbt6Zl7_CcPUozgszCOee3MdGVqP6aIEk7WGR6o6TpJU8wog0gb_hh85kOrm9lUIVTWwN4nOdgBzzdMy0dA8JlBorZFWgI7EcOFX59hjj0zSfVF3zzMQ9kFTqxctEMtWFLCaX1o3W-PKw2skUY7aMASzVep2RY5HaQ0Jop2nushfEs-rILXO6JHAaMjwsMmFzKCEkCC97-9vNngZzG00bF3unI-4SkN0RDJdKazzQ"/>
+<!-- AI Scanning Effects -->
+<div class="scan-line"></div>
+<div class="focus-bracket bracket-tl"></div>
+<div class="focus-bracket bracket-tr"></div>
+<div class="focus-bracket bracket-bl"></div>
+<div class="focus-bracket bracket-br"></div>
+<!-- Overlay to make it feel like it's processing -->
+<div class="absolute inset-0 bg-primary/5 mix-blend-overlay"></div>
+</div>
+</div>
+<!-- Right Column: Analysis Progress -->
+<div class="w-full md:w-1/2 pt-12 md:pt-24">
+<div class="bg-secondary-container/30 rounded-2xl p-8 backdrop-blur-sm border border-secondary-fixed/50">
+<div class="space-y-6" id="progress-container">
+<!-- Step 1 -->
+<div class="flex items-center gap-4 fade-in-step" style="animation-delay: 0.5s;">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[18px]" data-icon="check" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface">Processing image</p>
+</div>
+<!-- Step 2 -->
+<div class="flex items-center gap-4 fade-in-step" style="animation-delay: 1.5s;">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[18px]" data-icon="check" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface">Detecting clothing</p>
+</div>
+<!-- Step 3 -->
+<div class="flex items-center gap-4 fade-in-step" style="animation-delay: 2.5s;">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[18px]" data-icon="check" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface">Identifying accessories</p>
+</div>
+<!-- Step 4 -->
+<div class="flex items-center gap-4 fade-in-step" style="animation-delay: 3.5s;">
+<div class="w-8 h-8 rounded-full border-2 border-outline flex items-center justify-center relative overflow-hidden">
+<div class="absolute inset-0 bg-primary/20 animate-pulse"></div>
+<span class="material-symbols-outlined text-outline text-[18px]" data-icon="more_horiz">more_horiz</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant animate-pulse">Finding similar products...</p>
+</div>
+</div>
+<!-- Final Results (Hidden initially, shown after delay) -->
+<div class="mt-12 opacity-0 transition-opacity duration-1000 hidden" id="final-results">
+<div class="flex items-center justify-between mb-4 border-t border-outline-variant pt-6">
+<h3 class="font-headline-md text-headline-md text-primary">6 items detected ✨</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md rounded-full shadow-sm">White Top</span>
+<span class="px-4 py-2 bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md rounded-full shadow-sm">Blue Jeans</span>
+<span class="px-4 py-2 bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md rounded-full shadow-sm">White Sneakers</span>
+<span class="px-4 py-2 bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md rounded-full shadow-sm">Brown Handbag</span>
+<span class="px-4 py-2 bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md rounded-full shadow-sm">Sunglasses</span>
+<span class="px-4 py-2 bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md rounded-full shadow-sm">Necklace</span>
+</div>
+<div class="mt-8">
+<button class="w-full py-4 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-widest rounded-lg hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl transform hover:scale-[1.02] duration-300">
+                                View Matches
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<script>
+        // Simple script to simulate the loading sequence and reveal results
+        setTimeout(() => {
+            const step4 = document.querySelector('.fade-in-step:nth-child(4)');
+            if(step4) {
+                const iconContainer = step4.querySelector('.w-8');
+                const text = step4.querySelector('p');
+                
+                // Update Step 4 to complete
+                iconContainer.className = 'w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary transition-all duration-300';
+                iconContainer.innerHTML = `<span class="material-symbols-outlined text-[18px]" data-icon="check" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check</span>`;
+                
+                text.className = 'font-body-lg text-body-lg text-on-surface transition-colors duration-300';
+                text.textContent = 'Finding similar products';
+
+                // Stop scanning animation
+                document.querySelector('.scan-line').style.display = 'none';
+                
+                // Reveal results
+                const finalResults = document.getElementById('final-results');
+                finalResults.classList.remove('hidden');
+                setTimeout(() => {
+                    finalResults.classList.add('opacity-100');
+                    finalResults.classList.remove('opacity-0');
+                }, 100);
+            }
+        }, 5000);
+    </script>
+</body></html>

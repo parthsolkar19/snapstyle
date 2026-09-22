@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html class="light dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SnapStyle - Product Filters</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Playfair+Display:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-container-lowest": "#120c14", "on-tertiary-container": "#ff9ac6", "surface-bright": "#3e3740", "surface-container-high": "#2e2830", tertiary: "#ffb0d0", "tertiary-fixed-dim": "#ffb0d0", "surface-container": "#241d26", "on-background": "#ebdfea", secondary: "#e3b7f5", "on-secondary-fixed": "#2d0a3f", "on-tertiary-fixed": "#3d0024", error: "#ffb4ab", "on-error": "#690005", "surface-container-highest": "#39323b", "on-surface-variant": "#d1c2d3", "tertiary-container": "#8e0c5a", "surface-container-low": "#1f1922", primary: "#e8b3ff", "on-primary-fixed-variant": "#70109d", "on-secondary-container": "#d1a6e3", "primary-fixed-dim": "#e8b3ff", "primary-container": "#7316a0", "on-error-container": "#ffdad6", "surface-variant": "#39323b", outline: "#9a8c9d", "on-tertiary": "#63003d", "secondary-fixed": "#f6d9ff", "on-tertiary-fixed-variant": "#8a0657", background: "#171119", "on-secondary-fixed-variant": "#5c386d", "surface-tint": "#e8b3ff", "secondary-container": "#5c386d", "outline-variant": "#4e4351", "on-surface": "#ebdfea", "on-primary": "#500074", "inverse-on-surface": "#352e37", "error-container": "#93000a", "surface-dim": "#171119", "primary-fixed": "#f6d9ff", "on-primary-container": "#e1a1ff", "inverse-surface": "#ebdfea", "on-primary-fixed": "#310049", surface: "#171119", "on-secondary": "#442155", "tertiary-fixed": "#ffd8e6", "inverse-primary": "#8a34b7", "secondary-fixed-dim": "#e3b7f5"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {"margin-mobile": "20px", unit: "8px", "margin-desktop": "64px", "container-max": "1440px", gutter: "24px"}, fontFamily: {"label-sm": ["Hanken Grotesk"], "body-lg": ["Hanken Grotesk"], "label-md": ["Hanken Grotesk"], "headline-lg": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "headline-md": ["Playfair Display"], "body-md": ["Hanken Grotesk"], "display-lg": ["Playfair Display"], headline: ["Playfair Display"], display: ["Playfair Display"], body: ["Hanken Grotesk"], label: ["Hanken Grotesk"]}, fontSize: {"label-sm": ["12px", {lineHeight: "16px", fontWeight: "500"}], "body-lg": ["18px", {lineHeight: "28px", fontWeight: "400"}], "label-md": ["14px", {lineHeight: "20px", letterSpacing: "0.05em", fontWeight: "600"}], "headline-lg": ["40px", {lineHeight: "48px", fontWeight: "400"}], "headline-lg-mobile": ["32px", {lineHeight: "40px", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "32px", fontWeight: "500"}], "body-md": ["16px", {lineHeight: "24px", fontWeight: "400"}], "display-lg": ["64px", {lineHeight: "72px", letterSpacing: "-0.02em", fontWeight: "400"}]}}}};</script>
+<style>
+        /* Custom styles to hide scrollbar for horizontal scrolling chips if needed */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        
+        /* Smooth appearance for modal */
+        @keyframes slideUp {
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .modal-animate-in {
+            animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen">
+<!-- Top Navigation (Shell suppressed visually but structure maintained if it was a main destination, here omitted as it's a modal over content) -->
+<!-- Background Content (Simulated behind modal) -->
+<main class="flex-grow pt-16 pb-24 px-margin-mobile md:px-margin-desktop md:max-w-container-max md:mx-auto opacity-50 pointer-events-none">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter mb-8">
+<div class="h-64 bg-surface-container-high rounded-2xl animate-pulse"></div>
+<div class="h-64 bg-surface-container-high rounded-2xl animate-pulse"></div>
+<div class="h-64 bg-surface-container-high rounded-2xl animate-pulse hidden md:block"></div>
+<div class="h-64 bg-surface-container-high rounded-2xl animate-pulse hidden md:block"></div>
+</div>
+</main>
+<!-- Modal Overlay -->
+<div class="fixed inset-0 z-[100] flex items-end sm:items-center justify-center p-0 sm:p-4 bg-tertiary/40 backdrop-blur-sm transition-opacity duration-300">
+<!-- Modal Content Container -->
+<div class="w-full sm:max-w-md bg-surface-container-lowest rounded-t-3xl sm:rounded-3xl shadow-[0_-8px_30px_rgba(0,0,0,0.05)] sm:shadow-[0_20px_40px_rgba(0,0,0,0.08)] flex flex-col max-h-[795px] modal-animate-in overflow-hidden relative border border-surface-variant">
+<!-- Drag Handle (Mobile) -->
+<div class="w-full flex justify-center pt-4 pb-2 sm:hidden absolute top-0 left-0 bg-surface-container-lowest z-10">
+<div class="w-12 h-1.5 bg-surface-variant rounded-full"></div>
+</div>
+<!-- Header -->
+<div class="sticky top-0 bg-surface-container-lowest/90 backdrop-blur-md z-10 flex justify-between items-center px-6 py-5 border-b border-surface-container sm:pt-6">
+<h2 class="font-headline-md text-headline-md text-primary tracking-tight">Filters</h2>
+<button aria-label="Close filters" class="p-2 rounded-full hover:bg-surface-container transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 300;">close</span>
+</button>
+</div>
+<!-- Scrollable Content -->
+<div class="overflow-y-auto px-6 py-6 space-y-10">
+<!-- Sort Section -->
+<section>
+<h3 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-4">Sort By</h3>
+<div class="space-y-3">
+<label class="flex items-center justify-between p-3 rounded-xl border border-primary/20 bg-primary/5 cursor-pointer hover:border-primary/40 transition-colors">
+<span class="font-body-md text-body-md text-primary">Closest Match</span>
+<div class="w-5 h-5 rounded-full border-2 border-primary flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-primary"></div>
+</div>
+<input checked="" class="hidden" name="sort" type="radio"/>
+</label>
+<label class="flex items-center justify-between p-3 rounded-xl border border-transparent hover:bg-surface-container-low cursor-pointer transition-colors">
+<span class="font-body-md text-body-md text-on-surface-variant">Lowest Price</span>
+<div class="w-5 h-5 rounded-full border-2 border-outline-variant flex items-center justify-center"></div>
+<input class="hidden" name="sort" type="radio"/>
+</label>
+<label class="flex items-center justify-between p-3 rounded-xl border border-transparent hover:bg-surface-container-low cursor-pointer transition-colors">
+<span class="font-body-md text-body-md text-on-surface-variant">Highest Rated</span>
+<div class="w-5 h-5 rounded-full border-2 border-outline-variant flex items-center justify-center"></div>
+<input class="hidden" name="sort" type="radio"/>
+</label>
+</div>
+</section>
+<hr class="border-surface-container"/>
+<!-- Budget Section -->
+<section>
+<h3 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-4">Budget</h3>
+<div class="flex flex-wrap gap-3">
+<button class="px-5 py-2.5 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-highest transition-colors font-body-md text-body-md border border-transparent">
+                            Under ₹1,000
+                        </button>
+<button class="px-5 py-2.5 rounded-full bg-primary text-on-primary font-body-md text-body-md shadow-sm">
+                            ₹1,000–₹2,500
+                        </button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-highest transition-colors font-body-md text-body-md border border-transparent">
+                            ₹2,500–₹5,000
+                        </button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-highest transition-colors font-body-md text-body-md border border-transparent">
+                            ₹5,000+
+                        </button>
+</div>
+</section>
+<hr class="border-surface-container"/>
+<!-- Category Section -->
+<section>
+<h3 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-4">Category</h3>
+<div class="flex flex-wrap gap-3 pb-8">
+<button class="px-5 py-2.5 rounded-full bg-primary text-on-primary font-body-md text-body-md shadow-sm">
+                            Clothing
+                        </button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-highest transition-colors font-body-md text-body-md border border-transparent">
+                            Shoes
+                        </button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-highest transition-colors font-body-md text-body-md border border-transparent">
+                            Bags
+                        </button>
+<button class="px-5 py-2.5 rounded-full bg-primary text-on-primary font-body-md text-body-md shadow-sm">
+                            Accessories
+                        </button>
+</div>
+</section>
+</div>
+<!-- Sticky Footer Actions -->
+<div class="sticky bottom-0 bg-surface-container-lowest/95 backdrop-blur-md border-t border-surface-container px-6 py-4 flex justify-between items-center gap-4">
+<button class="font-label-md text-label-md text-on-surface-variant underline hover:text-primary transition-colors uppercase tracking-wider">
+                    Clear All
+                </button>
+<button class="flex-1 bg-primary hover:bg-primary/90 text-on-primary rounded-full py-4 px-8 font-label-md text-label-md uppercase tracking-widest flex items-center justify-center gap-2 shadow-sm transition-transform hover:scale-[1.02]">
+                    Show Results
+                    <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>

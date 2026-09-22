@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html class="light dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SnapStyle - Find Every Piece</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Playfair+Display:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-container-lowest": "#120c14", "on-tertiary-container": "#ff9ac6", "surface-bright": "#3e3740", "surface-container-high": "#2e2830", tertiary: "#ffb0d0", "tertiary-fixed-dim": "#ffb0d0", "surface-container": "#241d26", "on-background": "#ebdfea", secondary: "#e3b7f5", "on-secondary-fixed": "#2d0a3f", "on-tertiary-fixed": "#3d0024", error: "#ffb4ab", "on-error": "#690005", "surface-container-highest": "#39323b", "on-surface-variant": "#d1c2d3", "tertiary-container": "#8e0c5a", "surface-container-low": "#1f1922", primary: "#e8b3ff", "on-primary-fixed-variant": "#70109d", "on-secondary-container": "#d1a6e3", "primary-fixed-dim": "#e8b3ff", "primary-container": "#7316a0", "on-error-container": "#ffdad6", "surface-variant": "#39323b", outline: "#9a8c9d", "on-tertiary": "#63003d", "secondary-fixed": "#f6d9ff", "on-tertiary-fixed-variant": "#8a0657", background: "#171119", "on-secondary-fixed-variant": "#5c386d", "surface-tint": "#e8b3ff", "secondary-container": "#5c386d", "outline-variant": "#4e4351", "on-surface": "#ebdfea", "on-primary": "#500074", "inverse-on-surface": "#352e37", "error-container": "#93000a", "surface-dim": "#171119", "primary-fixed": "#f6d9ff", "on-primary-container": "#e1a1ff", "inverse-surface": "#ebdfea", "on-primary-fixed": "#310049", surface: "#171119", "on-secondary": "#442155", "tertiary-fixed": "#ffd8e6", "inverse-primary": "#8a34b7", "secondary-fixed-dim": "#e3b7f5"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {"margin-mobile": "20px", unit: "8px", "margin-desktop": "64px", "container-max": "1440px", gutter: "24px"}, fontFamily: {"label-sm": ["Hanken Grotesk"], "body-lg": ["Hanken Grotesk"], "label-md": ["Hanken Grotesk"], "headline-lg": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "headline-md": ["Playfair Display"], "body-md": ["Hanken Grotesk"], "display-lg": ["Playfair Display"], headline: ["Playfair Display"], display: ["Playfair Display"], body: ["Hanken Grotesk"], label: ["Hanken Grotesk"]}, fontSize: {"label-sm": ["12px", {lineHeight: "16px", fontWeight: "500"}], "body-lg": ["18px", {lineHeight: "28px", fontWeight: "400"}], "label-md": ["14px", {lineHeight: "20px", letterSpacing: "0.05em", fontWeight: "600"}], "headline-lg": ["40px", {lineHeight: "48px", fontWeight: "400"}], "headline-lg-mobile": ["32px", {lineHeight: "40px", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "32px", fontWeight: "500"}], "body-md": ["16px", {lineHeight: "24px", fontWeight: "400"}], "display-lg": ["64px", {lineHeight: "72px", letterSpacing: "-0.02em", fontWeight: "400"}]}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen antialiased flex flex-col pt-20 pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-surface/80 dark:bg-surface/80 backdrop-blur-md bg-surface-bright/50 dark:bg-surface-dim/50">
+<button class="text-on-surface-variant hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<div class="font-headline-md text-headline-md font-bold tracking-tight text-primary dark:text-primary-fixed">
+            SnapStyle
+        </div>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-primary dark:text-primary-fixed font-label-md text-label-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Find</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Upload</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Wishlist</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Profile</a>
+</div>
+<button class="text-on-surface-variant hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-4 md:grid-cols-12 gap-gutter pt-8 md:pt-24 items-center">
+<!-- Hero Section -->
+<div class="col-span-4 md:col-span-6 flex flex-col justify-center space-y-8 z-10">
+<div class="space-y-4">
+<h1 class="font-display-lg text-display-lg md:text-[80px] md:leading-[88px] text-primary">
+                    Love the look? <br/>Find every piece.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                    Upload an outfit inspiration and discover similar clothes, shoes and accessories in one place.
+                </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-on-primary font-label-md text-label-md uppercase px-8 py-4 rounded-full flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
+<span class="material-symbols-outlined filled-icon text-xl" data-icon="photo_camera">photo_camera</span>
+                    Upload Inspiration
+                </button>
+<button class="bg-secondary-container text-on-secondary-container font-label-md text-label-md uppercase px-8 py-4 rounded-full hover:bg-secondary-fixed-dim transition-colors flex items-center justify-center">
+                    Try Demo
+                </button>
+</div>
+<!-- How it works -->
+<div class="pt-12 flex flex-col gap-8 md:hidden">
+<div class="flex items-start gap-4">
+<div class="text-on-surface-variant font-label-sm text-label-sm opacity-50 pt-1">01</div>
+<div>
+<div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-primary" data-icon="upload_file">upload_file</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">Upload</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Snap or upload a photo.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="text-on-surface-variant font-label-sm text-label-sm opacity-50 pt-1">02</div>
+<div>
+<div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center mb-2 relative">
+<!-- Focus Brackets -->
+<div class="absolute top-2 left-2 w-2 h-2 border-t border-l border-primary"></div>
+<div class="absolute bottom-2 right-2 w-2 h-2 border-b border-r border-primary"></div>
+<span class="material-symbols-outlined text-primary" data-icon="troubleshoot">troubleshoot</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">Analyze</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">AI maps every item.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="text-on-surface-variant font-label-sm text-label-sm opacity-50 pt-1">03</div>
+<div>
+<div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-primary" data-icon="shopping_bag">shopping_bag</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">Find</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Shop similar pieces instantly.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Visual / Image Grid -->
+<div class="col-span-4 md:col-span-6 relative h-[600px] hidden md:block">
+<!-- Decorative blur -->
+<div class="absolute -top-10 -right-10 w-64 h-64 bg-secondary-container rounded-full blur-[100px] opacity-60"></div>
+<div class="grid grid-cols-2 gap-4 h-full">
+<div class="space-y-4 pt-12">
+<div class="relative w-full h-[300px] rounded-2xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.05)] bg-surface-container hover:scale-[1.02] transition-transform">
+<img class="w-full h-full object-cover" data-alt="A high-fashion editorial photograph of a model wearing a minimalist beige trench coat walking down a sunlit city street. The lighting is crisp and natural, highlighting the elegant tailoring of the coat. The overall aesthetic is quiet luxury, with soft warm tones complementing a minimalist, sophisticated vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAnkda9xRjf97PZMndw1uWJRj7CGHf1gU3Ig2sOW2mxepxr-Q3UlzSOs4A1gN5tzi5aynavBmYiQmFHWByjnji1zfncwRLjDImcI4qqcZYDeYjMteMpfBdpT7CodnwLWdH-mBqnp1ICw-vvhiXcvt8NKuDOaSPw7egChT7O7w-Pwwn91ZfGUJRqSU6dDfgTu3jJosW_Xuo2gv_99Er0ho0NCAyMy1IT7DmqQ4Qw-76e5E4YObGPGyjmw"/>
+<div class="absolute top-4 left-4 w-4 h-4 border-t border-l border-white/50"></div>
+<div class="absolute bottom-4 right-4 w-4 h-4 border-b border-r border-white/50"></div>
+</div>
+<div class="flex items-start gap-4">
+<div class="text-on-surface-variant font-label-sm text-label-sm opacity-50 pt-1">01</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary mb-1 text-lg">Upload</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Provide your inspiration photo.</p>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.05)] bg-secondary-container hover:scale-[1.02] transition-transform group">
+<img class="w-full h-full object-cover" data-alt="A close-up stylized fashion product shot of a sleek leather handbag resting on a clean, creamy beige plinth. The lighting casts soft, ambient shadows, creating depth without harsh contrast. A subtle glowing digital scanning line passes over the bag, indicating AI analysis in a modern, premium e-commerce setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHr1CNx8nuQJ2xy9Ww3SEo0xPQWS9X-xE3ABq0jyq1zitT-tg0vojD8jJm8BjVD81JlJcVYcBZkhHPUEdHgjZarNFYyYuwirjov1aTVpSWar_SKBnzLY4s9Qjvf6wV0Np2m_d7ue-WTNjoV6P6gPHcoNudQEZqAz29YnEWMLyEW1OazNodkKeDcqUJggUS6hLe0R7L3FeNfs1akfspf-cK7mGhLmawkY-4kBtGwhd8oYW-p6At8eYWUA"/>
+<!-- AI Scan Overlay simulation -->
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent h-[20%] w-full animate-[scan_3s_ease-in-out_infinite]"></div>
+<!-- AI Chips -->
+<div class="absolute bottom-4 left-4 flex gap-2">
+<span class="bg-surface-container-lowest/80 backdrop-blur-sm text-primary px-3 py-1 rounded-full font-label-sm text-[10px] tracking-wide uppercase">Leather</span>
+<span class="bg-surface-container-lowest/80 backdrop-blur-sm text-primary px-3 py-1 rounded-full font-label-sm text-[10px] tracking-wide uppercase">Tote</span>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="text-on-surface-variant font-label-sm text-label-sm opacity-50 pt-1">02 / 03</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary mb-1 text-lg">Analyze &amp; Find</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">We map items and find matches.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-surface/90 dark:bg-surface-container/90 backdrop-blur-lg rounded-t-xl shadow-sm border-t-0">
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed font-bold scale-110 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined filled-icon mb-1" data-icon="home">home</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-60 hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="search">search</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-[10px]">Find</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-60 hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="add_a_photo">add_a_photo</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-[10px]">Upload</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-60 hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="favorite">favorite</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-[10px]">Wishlist</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-60 hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-[10px]">Profile</span>
+</a>
+</nav>
+<style>
+        @keyframes scan {
+            0% { transform: translateY(-100%); }
+            50% { transform: translateY(400%); }
+            100% { transform: translateY(-100%); }
+        }
+    </style>
+</body></html>

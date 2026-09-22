@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Recreate This Look - SnapStyle</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Playfair+Display:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-container-lowest": "#120c14", "on-tertiary-container": "#ff9ac6", "surface-bright": "#3e3740", "surface-container-high": "#2e2830", tertiary: "#ffb0d0", "tertiary-fixed-dim": "#ffb0d0", "surface-container": "#241d26", "on-background": "#ebdfea", secondary: "#e3b7f5", "on-secondary-fixed": "#2d0a3f", "on-tertiary-fixed": "#3d0024", error: "#ffb4ab", "on-error": "#690005", "surface-container-highest": "#39323b", "on-surface-variant": "#d1c2d3", "tertiary-container": "#8e0c5a", "surface-container-low": "#1f1922", primary: "#e8b3ff", "on-primary-fixed-variant": "#70109d", "on-secondary-container": "#d1a6e3", "primary-fixed-dim": "#e8b3ff", "primary-container": "#7316a0", "on-error-container": "#ffdad6", "surface-variant": "#39323b", outline: "#9a8c9d", "on-tertiary": "#63003d", "secondary-fixed": "#f6d9ff", "on-tertiary-fixed-variant": "#8a0657", background: "#171119", "on-secondary-fixed-variant": "#5c386d", "surface-tint": "#e8b3ff", "secondary-container": "#5c386d", "outline-variant": "#4e4351", "on-surface": "#ebdfea", "on-primary": "#500074", "inverse-on-surface": "#352e37", "error-container": "#93000a", "surface-dim": "#171119", "primary-fixed": "#f6d9ff", "on-primary-container": "#e1a1ff", "inverse-surface": "#ebdfea", "on-primary-fixed": "#310049", surface: "#171119", "on-secondary": "#442155", "tertiary-fixed": "#ffd8e6", "inverse-primary": "#8a34b7", "secondary-fixed-dim": "#e3b7f5"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {"margin-mobile": "20px", unit: "8px", "margin-desktop": "64px", "container-max": "1440px", gutter: "24px"}, fontFamily: {"label-sm": ["Hanken Grotesk"], "body-lg": ["Hanken Grotesk"], "label-md": ["Hanken Grotesk"], "headline-lg": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "headline-md": ["Playfair Display"], "body-md": ["Hanken Grotesk"], "display-lg": ["Playfair Display"], headline: ["Playfair Display"], display: ["Playfair Display"], body: ["Hanken Grotesk"], label: ["Hanken Grotesk"]}, fontSize: {"label-sm": ["12px", {lineHeight: "16px", fontWeight: "500"}], "body-lg": ["18px", {lineHeight: "28px", fontWeight: "400"}], "label-md": ["14px", {lineHeight: "20px", letterSpacing: "0.05em", fontWeight: "600"}], "headline-lg": ["40px", {lineHeight: "48px", fontWeight: "400"}], "headline-lg-mobile": ["32px", {lineHeight: "40px", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "32px", fontWeight: "500"}], "body-md": ["16px", {lineHeight: "24px", fontWeight: "400"}], "display-lg": ["64px", {lineHeight: "72px", letterSpacing: "-0.02em", fontWeight: "400"}]}}}};</script>
+<style>
+        body { background-color: theme('colors.surface'); color: theme('colors.on-surface'); }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .filled-icon { font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .ambient-shadow { box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05); }
+        .glass-panel { background: rgba(245, 243, 243, 0.6); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased min-h-screen flex flex-col pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile py-4 bg-surface/80 dark:bg-surface/80 backdrop-blur-md bg-surface-bright/50 dark:bg-surface-dim/50 hidden md:flex">
+<button class="p-2 text-on-surface-variant dark:text-on-surface-variant hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<div class="font-headline-md text-headline-md font-bold tracking-tight text-primary dark:text-primary-fixed text-center absolute left-1/2 -translate-x-1/2">
+            SnapStyle
+        </div>
+<div class="flex items-center gap-4">
+<nav class="hidden lg:flex gap-8 items-center mr-8">
+<a class="font-label-md text-label-md text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity uppercase tracking-wider" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity uppercase tracking-wider" href="#">Find</a>
+<a class="font-label-md text-label-md text-primary font-bold uppercase tracking-wider border-b-2 border-primary pb-1" href="#">Upload</a>
+<a class="font-label-md text-label-md text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity uppercase tracking-wider" href="#">Wishlist</a>
+<a class="font-label-md text-label-md text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity uppercase tracking-wider" href="#">Profile</a>
+</nav>
+<button class="p-2 text-on-surface-variant dark:text-on-surface-variant hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<!-- Mobile Header (Simplified for transactional/focused view) -->
+<header class="md:hidden flex justify-between items-center px-margin-mobile py-4 bg-surface sticky top-0 z-40">
+<button class="p-2 text-primary">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<div class="font-headline-md text-headline-md font-bold tracking-tight text-primary">
+            Recreate Look
+        </div>
+<div class="w-10"></div> <!-- Spacer for centering -->
+</header>
+<main class="flex-grow pt-4 md:pt-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="mb-8 md:mb-12">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-2">Recreate This Look ✨</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">We've found the perfect matches for your inspired outfit.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-gutter">
+<!-- Left Column: Inspiration Image -->
+<div class="lg:col-span-5 relative group">
+<div class="aspect-[3/4] w-full rounded-2xl overflow-hidden relative">
+<img class="object-cover w-full h-full" data-alt="A high-fashion editorial photograph of a model wearing a chic, minimalist outfit consisting of a crisp white blouse and perfectly tailored blue jeans. The lighting is soft and natural, emphasizing the texture of the fabrics. The background is a muted, abstract studio setting in cream and beige tones, perfectly aligning with a sophisticated light-mode UI aesthetic. The mood is effortlessly elegant." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXk5MdR5hTxWHn2kQUjEsKUOWG4e-TYO4PBlb9IVxL1ul5fAVV17Kl0LRz5aKWh8y9rfNZNn55uKAcVG2uic-zL8cM8nUpJzpEOdHFCy89EIJM4_YoX7wOyRIdnKmtYr25IoDT8Ac2wYV5dlXWtZIdpL9BQR4qlzoM9xxKo4hRzPnOBO3axia096UyqTb1GfAZVF6HEgaLAJpmB-ocEfooNhhShd6BOAmGXOKMALfpHaz9OFWoDIwppQ"/>
+<!-- Focus Brackets (Visual Cues) -->
+<div class="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-primary/40 rounded-tl-lg"></div>
+<div class="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-primary/40 rounded-tr-lg"></div>
+<div class="absolute bottom-4 left-4 w-8 h-8 border-b-2 border-l-2 border-primary/40 rounded-bl-lg"></div>
+<div class="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-primary/40 rounded-br-lg"></div>
+<!-- Scan overlay effect -->
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-transparent translate-y-[-100%] group-hover:translate-y-[100%] transition-transform duration-1000 ease-in-out"></div>
+</div>
+<div class="mt-4 flex items-center gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-sm text-label-sm">AI Matched</span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-sm text-label-sm">98% Accuracy</span>
+</div>
+</div>
+<!-- Right Column: Products & Summary -->
+<div class="lg:col-span-7 flex flex-col">
+<h2 class="font-headline-md text-headline-md text-primary mb-6 hidden lg:block">Curated Selection</h2>
+<!-- Itemized List -->
+<div class="space-y-6 flex-grow">
+<!-- Item 1 -->
+<div class="flex gap-4 p-4 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors ambient-shadow group relative overflow-hidden">
+<div class="w-24 h-32 rounded-lg overflow-hidden shrink-0">
+<img class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" data-alt="A clean, minimalist product shot of a crisp white top against a solid light beige background. The garment is neatly folded or displayed flat, highlighting its premium cotton texture and simple, elegant design. The lighting is bright and even, suited for a high-end fashion e-commerce site with a light-mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_klGO3wsCHqy2cIpbVqKobAyjYbgjLFOJQOXwSs6jdxdtmMJMBz1TmaIoeG9gk9iCzaWgNtpqU0ylYC55escYEKjTTeT0Xz7SU3eGzWqZ_iZsbFQ_4LA3-A4dYFxDGz9kYvZ6z7ykpXQdZCEFIzcGK73k8moV33OSYMeWfECmIRXxJPrD0c9vAmX148B-__wZaEcuVmCWxhC3n8JRuc7GAoBY3MJwuQ_69LGLheOTj2unpChAH7q3LA"/>
+</div>
+<div class="flex flex-col flex-grow justify-between py-1">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-body-lg text-body-lg text-primary">Crisp White Blouse</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Zara Premium</p>
+</div>
+<span class="font-body-lg text-body-lg text-primary">₹799</span>
+</div>
+<div class="flex justify-between items-end">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-white border border-outline-variant flex items-center justify-center font-label-sm text-[10px]">M</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm underline underline-offset-4 decoration-1">Edit Size</button>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1 font-label-sm text-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-[18px]" data-icon="swap_horiz">swap_horiz</span> Swap
+                                 </button>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex gap-4 p-4 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors ambient-shadow group relative overflow-hidden">
+<div class="w-24 h-32 rounded-lg overflow-hidden shrink-0">
+<img class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" data-alt="A premium product photograph of a pair of classic straight-leg blue jeans, presented flat against a soft cream background. The denim texture and stitching details are clearly visible under bright, soft studio lighting. The image conveys high quality and timeless fashion within a minimalist, light-mode interface context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHa8b3RUweUIDNi8AYpmWelULa5je7O6ie31euQpdWuHHfE0AVNkm8J1kTWdqRhqdHvP2LFLWiWUcMPvdFYw0wC8iWNt_7hpCUS9ItnsbfdkxxVjJT3fV290-NjcUK68qzYV4bZcYtvIiTceYhFd0nyMMtLCWzlSpqOUGIntczAnvPDJInjTZndk7wq7xOwWAoQWIkbfcbuN7svWOCZUQkqpzR7wnuW9WhkhLUXOxvvmZAKZBPXcWL1Q"/>
+</div>
+<div class="flex flex-col flex-grow justify-between py-1">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-body-lg text-body-lg text-primary">Classic Straight Jeans</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Levi's Vintage</p>
+</div>
+<span class="font-body-lg text-body-lg text-primary">₹1,299</span>
+</div>
+<div class="flex justify-between items-end">
+<div class="flex items-center gap-2">
+<span class="w-8 h-6 rounded border border-outline-variant flex items-center justify-center font-label-sm text-[10px]">32W</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm underline underline-offset-4 decoration-1">Edit Size</button>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1 font-label-sm text-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-[18px]" data-icon="swap_horiz">swap_horiz</span> Swap
+                                 </button>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex gap-4 p-4 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors ambient-shadow group relative overflow-hidden">
+<div class="w-24 h-32 rounded-lg overflow-hidden shrink-0">
+<img class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" data-alt="A detailed still-life shot of a minimalist gold pendant necklace and a pair of small gold hoop earrings, laid delicately on a smooth, off-white surface. The lighting creates subtle reflections on the jewelry, highlighting its elegance. The composition is clean with generous whitespace, perfect for a high-end fashion e-commerce aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWCYsTDT1PDeoqZG-lsNkDnpBrkjJUDcLMGSHHDV4FDnwTR68NJVuTT6eCsSATb8yGURqeTHaTf8ZVV3GtkvYzWHhFVwMreO8AmAKCQw6jlN0NVeKeSnSWEH3-NXqrHkVjPxC3ajNBQ6gquk-n6N384HyaRDIGqfcb7MFV8sOpxiUcEdhRvBFctz_-Nvw-n67GZyUYYgAjZXv0uTRKvYKgV3R0DI_NhJfkejESoCAz87oZ2L_nCCVIOw"/>
+</div>
+<div class="flex flex-col flex-grow justify-between py-1">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-body-lg text-body-lg text-primary">Minimalist Gold Set</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Aurate</p>
+</div>
+<span class="font-body-lg text-body-lg text-primary">₹1,996</span>
+</div>
+<div class="flex justify-between items-end">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">One Size</span>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1 font-label-sm text-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-[18px]" data-icon="swap_horiz">swap_horiz</span> Swap
+                                 </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Checkout Summary Sticky/Fixed Bottom on Mobile -->
+<div class="mt-8 lg:mt-12 pt-6 border-t border-surface-dim lg:static fixed bottom-0 left-0 w-full bg-surface lg:bg-transparent px-margin-mobile lg:px-0 pb-6 lg:pb-0 z-40 lg:z-auto">
+<div class="flex justify-between items-end mb-6">
+<span class="font-body-lg text-body-lg text-on-surface-variant">Estimated Total</span>
+<span class="font-display-lg text-display-lg text-primary leading-none">₹4,094</span>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="flex-1 bg-primary text-on-primary py-4 px-8 rounded-full font-label-md text-label-md uppercase tracking-widest hover:bg-primary/90 transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2">
+                            Shop This Look
+                            <span class="material-symbols-outlined text-[20px]" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="sm:flex-none bg-secondary-container text-on-secondary-container py-4 px-8 rounded-full font-label-md text-label-md uppercase tracking-widest hover:bg-secondary-container/80 transition-all flex items-center justify-center gap-2">
+                            Save Look
+                            <span class="material-symbols-outlined text-[20px] filled-icon text-error" data-icon="favorite">favorite</span>
+</button>
+</div>
+</div>
+<!-- Spacer for mobile sticky footer -->
+<div class="h-40 lg:hidden"></div>
+</div>
+</div>
+</main>
+</body></html>
