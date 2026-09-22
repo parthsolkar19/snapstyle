@@ -123,7 +123,7 @@
 </div>
 <div>
 <div class="flex justify-between items-start mb-1">
-<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Myntra</span>
+<span id="product-2-brand" class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Myntra</span>
 <span class="font-body-md text-body-md font-medium">₹999</span>
 </div>
 <h4 id="product-2-name" class="font-body-md text-body-md text-on-surface truncate">
@@ -193,7 +193,7 @@
 </div>
 <div>
 <div class="flex justify-between items-start mb-1">
-<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">H&amp;M</span>
+<span id="product-1-brand" class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">H&amp;M</span>
 <span class="font-body-md text-body-md font-medium">₹2,299</span>
 </div>
 <h4 class="font-body-md text-body-md text-on-surface truncate">Wide High Jeans</h4>
@@ -244,12 +244,25 @@
 }   
 console.log("Detected Product Categories:", analysis.items);
 if (analysis && analysis.items[0]) {
+    const item = analysis.items[0];
+
     document.getElementById('product-1-name').textContent =
-        analysis.items[0].type;
+        `${item.color} ${item.style} ${item.type}`;
 }
 if (analysis && analysis.items[1]) {
+    const item = analysis.items[1];
+
     document.getElementById('product-2-name').textContent =
-        analysis.items[1].type;
+        `${item.color} ${item.style} ${item.type}`;
+}
+if (analysis && analysis.items[0]) {
+    document.getElementById('product-1-brand').textContent =
+        analysis.items[0].type.toUpperCase();
+}
+
+if (analysis && analysis.items[1]) {
+    document.getElementById('product-2-brand').textContent =
+        analysis.items[1].type.toUpperCase();
 }
 </script>
 </body>
